@@ -9,69 +9,118 @@
         integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="normalize.css">
-    <link href="https://fonts.googleapis.com/css?family=Muli|Ovo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Raleway" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <title>HTML wireframe</title>
+    <title>Portfolio</title>
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav role="navigation">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- Top container -->
-    <main role="main">
-        <header role="banner">
-            <div class="heroImage">
-                <div class="heroText">
-                    <h1>Samantha Ambroise</h1>
-                    <p>Welcome text</p>
-                </div>
+    <div class="wrapper">
+        <!-- Navigation -->
+        <nav role="navigation" class="main-nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#section-1">About</a></li>
+                <li><a href="#section-3">Projects</a></li>
+                <li><a href="#section-4">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- Top container -->
+        <section class="top-container">
+            <header id="showcase" class="grid">
+                <div class="heroImage"></div>
+            <div class="content-wrap">
+                <h1>Welcome!</h1>
+                <p>My ultimate goal in life is to collect the whole fellowship! I've started my journey with Gandalf the Tan as the lead.<p>
+                <a href="#" class="btn">Read More</a>
             </div>
-        </header>
+            </header>
 
-        <!-- Boxes Section -->
-        <section class="About">
-            <h2>About</h2>
-            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-            when an unknown printer took a galley of type and scrambled it to make a type 
-            specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. </p>
-        </section>
+            <!-- Main Area -->
+            <main id="main">
+                <!-- Section 1 -->
+                <section id="section-1" class="grid">
+                    <div class="content-wrap">
+                        <h2 class="content-title">About Me</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores officiis temporibus
+                            numquam, fugiat nisi hic neque a harum tenetur sit eum debitis error vel voluptates quo,
+                            accusamus soluta obcaecati velit? Praesentium corrupti deleniti iure eaque magni sapiente
+                            alias reprehenderit officia?</p>
+                    </div>
+                </section>
+                <!-- Section 2 -->
+                <section id="section-2" class="grid">
+                        <div class="box box-a">
+                            <i class="fab fa-github fa-3x"></i>
+                            <h3>GitHub</h3>
+                            <a href="https://github.com/sam-ilki" target="_blank" class="btn">Visit</a>
+                         </div>
+                        <div class="box box-b">
+                            <i class="fab fa-linkedin fa-3x"></i>
+                            <h3>LinkedIn</h3>
+                            <a href="https://www.linkedin.com/in/sya5179/" target="_blank" class="btn">Visit</a>
+                        </div>
+                        <div class="box box-c">
+                            <i class="far fa-file fa-3x"></i>
+                            <h3>Resume</h3>
+                            <a href="" target="_blank" class="btn">Visit</a>
+                        </div>
+                </section>
+                <!-- Section 3 -->
+                <section id="section-3" class="grid">
+                    <div class="portfolio-content project-a">
+                      <h2 class="content-title">Food Origin Quiz App</h2>
+                        <img src="images/quizScreenshot.JPG" alt="Screenshot of Quiz App">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla dolore dolorum, amet eligendi totam magnam.</p>
 
-        <section class="Projects">
-            <h2>Projects</h2>
-            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-            when an unknown printer took a galley of type and scrambled it to make a type 
-            specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. </p>
-        </section>
+                        <a href="https://jbroderick9729.github.io/food-origin-quiz-app/" class="btn">Live Page</a>
+                        <a href="https://github.com/jbroderick9729/food-origin-quiz-app" class="btn">GitHub Repo</a>
+                    </div>
+                    <div class="portfolio-content project-b">
+                      <h2 class="content-title">Future Project</h2>
+                        <img src="" alt="Screenshot of a project">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla dolore dolorum, amet eligendi totam magnam.</p>
 
-        <section class="">
-            <h2></h2>
-            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-            when an unknown printer took a galley of type and scrambled it to make a type 
-            specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. </p>
-        </section>
+                        <a href="" class="btn">Live Page</a>
+                        <a href="" class="btn">GitHub Repo</a>
+                    </div>
+                    <div class="portfolio-content project-c">
+                      <h2 class="content-title">Future Project</h2>
+                        <img src="" alt="Screenshot of a project">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla dolore dolorum, amet eligendi totam magnam.</p>
 
-        <section class="">
-            <h2></h2>
-            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-            when an unknown printer took a galley of type and scrambled it to make a type 
-            specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. </p>
-        </section>
+                        <a href="" class="btn">Live Page</a>
+                        <a href="" class="btn">GitHub Repo</a>
+                    </div>
+                    <div class="portfolio-content project-d">
+                      <h2 class="content-title">Future Project</h2>
+                        <img src="" alt="Screenshot of a project">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla dolore dolorum, amet eligendi totam magnam.</p>
 
-        <!-- Info Section -->
-    </main>
-    <footer role="content-info">Footer</footer>
-    <script type="text/javascript" src="scripts.js"></script>
+                        <a href="" class="btn">Live Page</a>
+                        <a href="" class="btn">GitHub Repo</a>
+                    </div>
+                </section>
+
+
+                <!-- Section 4 -->
+                <section id="section-4" class="grid">
+                <div class="content-wrap">
+                  <div class="box">
+                    <h2 class="content-title">Contact Me</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil totam ipsam, voluptate dicta ipsa maiores!</p>
+                    <p>ilkigin@gmail.com</p>
+                  </div>
+                </div>  
+                </section>
+            </main>
+            <!-- footer -->
+            <footer id="main-footer" class="grid">
+            <div>
+                <p>&copy; created by Samantha Ambroise 2019</p>
+            </div>
+            </footer>
+    </div>
 </body>
+
 </html>
