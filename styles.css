@@ -1,15 +1,21 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 /* CSS Variables */
 :root {
-    --primary: rgb(74, 102, 102);
+    --primary: rgba(126, 158, 158, 0.575);
     --dark: rgb(41, 39, 46);
-    --light: rgb(107, 167, 167);
-    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+    --light: rgb(241, 241, 241);
+    --shadow: 2px 2px 4px rgba(104, 104, 104, 0.8);
 }
 
 /* core css */
 body {
     font-family: 'Raleway', Arial, Helvetica, sans-serif;
-    background: var(--light);
+    background: var(--primary);
     color: var(--dark);
     font-size:1.1em;
     line-height: 1.5;
@@ -24,7 +30,6 @@ h1, h2, h3 {
 }
 
 p {
-    margin: 0;
     padding: 1em 0;
 }
 
@@ -37,39 +42,59 @@ p {
     padding: 1em;
     border: 1px solid var(--primary);
     margin: .5em 0;
-    border-radius: 0.2em;
+    border-radius: .4em;
 }
 
 .btn:hover {
     background: var(--primary);
     color: var(--light);
+    box-shadow: var(--shadow);
 }
 
 
 /* Navigation */
-.main-nav ul {
-    background: var(--dark);
-    display: grid;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    grid-template-columns: repeat(4, 1fr);
-}
-
-.main-nav a {    
-
-    font-family: 'Oswald', sans-serif;
-
-    display: inline-block;
-    text-decoration: none;
-    padding: 0.8rem;
-    text-align: center;
+.logo {
     color: var(--light);
     text-transform: uppercase;
-    font-size: 1.1rem;
-
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh; 
+    background: var(--dark);
+    /* font-family: 'Oswald', sans-serif; */
+}
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 45%;
+}
+.nav-links li {
+    list-style: none;
 }
 
+.nav-links a {    
+    text-decoration: none;
+    color: var(--light);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    /* font-size: 1.1rem;  */
+} 
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    margin:5px;
+    background-color: var(--light);
+    transition: all 0.3s ease;
+}
+.burger {
+    display: none;
+    cursor: pointer;
+}
 
 /* Header Showcase heroImage */
 
@@ -80,26 +105,22 @@ p {
 }
 
 #showcase .heroImage {
-    position: absolute;
-    background: var(--primary) url(images/portfolioHero.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
+    /* opacity: 0.54; */
+    height: 100vh;
+    background-image: url(images/Cliffside.jpg);
     background-size: cover;
-    width: 100vw;
-    height: 50%;
-    z-index: -1;
-    opacity: 0.54;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: -1; 
 }
 
-#showcase h1 {
-    padding-top: 100px;
+#showcase h1, #showcase p {
     padding-bottom: 0;
-    color: var(--dark);
-}
-
-#showcase p {
-    color: var(--dark);
-    font-weight: 900; 
+    color: var(--light);
+    text-shadow: var(--shadow);
 }
 
 #showcase .content-wrap {
@@ -108,7 +129,7 @@ p {
 
 /* Section 1 About Me*/
 #section-1 {
-    background: var(--light);
+    background: var(--primary);
     color: var(--dark);
     padding-bottom: 2em;
 }
@@ -121,15 +142,23 @@ p {
 /* section 2 Visit boxes*/
 #section-2 {
     padding: 2em 1em 1em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 #section-2 .box {
-    max-width: 15em;
-    max-height: auto;
-    margin: .5em auto;
+    margin: .5em;
+    border-radius: 1em;
     border: 1px solid var(--primary);
-    background-color: var(--primary);
+    background-color: var(--light);
     box-shadow: var(--shadow);
+    min-width: 15em;
+    max-width: 30em;
+    /* display: inline-block; */
+}
+#section-2 a {
+    text-decoration: none;
 }
 
 .box-a, .box-b, .box-c {
@@ -139,27 +168,23 @@ p {
 
 /* section 3 Portfolio*/
 #section-3 {
-    /* padding: 2em; */
-    height: auto;
-    min-width: 80%;
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 #section-3 .portfolio-content {     
-    /* border: 1px solid black; */
-    /* padding: 2em; */
+    border-radius: 1em;
+    width: 16em;
     margin: 2em 0;
-    background-color: var(--primary);
+    background-color: var(--light);
     box-shadow: var(--shadow);
 }
 
 #section-3 img {
     display: block;
-    max-width: 98%;
-    min-width: 298px;
-    height: 300px;
+    width:98%;
+    height: 13em;
     margin: auto;
     
 }
@@ -179,12 +204,31 @@ p {
 }
 
 /* media queries */
-
-@media (min-width: 430px) {
-#section-3 .portfolio-content {
-    max-width: 350px;
-    display: inline-block;
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
     }
+ .nav-links{
+     position: absolute;
+     right: 0px;
+     height: 92vh;
+     top: 8vh;
+     background: var(--dark);
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+ }
+ .nav-links li {
+     opacity: 0;
+ }
+ .burger {
+     display: block;
+ }
+
+
 }
 
 @media (min-width: 700px){ 
@@ -196,48 +240,44 @@ p {
     border: 0;
     }
 
-    /* showcase */
- #showcase .grid{
-    display: grid;
-    grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr
- }
 
  /* section 1 */
  #section-1 .content-title {
     font-size: 2.5em
  }
 
- #section-1 p {
-    margin: 1em 4em;
+
+}
+@media screen and (max-width: 1024px) {
+ .nav-links {
+     width: 50%;
  }
 
- /* section 2 */
- #section-2 .grid{
-    display: grid;
-    grid-template-columns:repeat(3, 1fr);
-    margin: .5em auto;
+
 }
 
-#section-2 .box {
-    min-width: 15em;
-    max-width: 30em;
-    box-shadow:none;
-    border: none;
-    display: inline-block;
-    grid-gap: 4em;
-}
-#section-2 .box {
-    transition: .4s background-color .5s;
+/* nav-animations */
+.nav-active {
+    transform: translateX(0%);
 }
 
-#section-2 .box:hover {
-    background-color:rgba(158, 158, 158, 0.274); 
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translate(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0px);
+    }
 }
-
-/* section 3 */
-#section-3 .portfolio-content {
-    max-width: 350px;
-    display: inline-block;
+.open .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
 }
-
-};
+.open .line2 {
+    opacity: 0;
+}
+.open .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+    
+}
