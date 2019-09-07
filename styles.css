@@ -219,7 +219,7 @@ nav {
     align-items: center;
     width: 50%;
     transform: translateX(100%);
-    transition: transform 0.5s ease-in;
+    /* transition: transform 0.5s ease-in; */
  }
  .nav-links li {
      opacity: 0;
@@ -228,11 +228,7 @@ nav {
      display: block;
  }
 
-
-}
-
-@media (min-width: 700px){ 
-.btn {
+ .btn {
     background-color: var(--dark);
     color: var(--light);
     padding: 0.6rem 1.3rem;
@@ -246,8 +242,8 @@ nav {
     font-size: 2.5em
  }
 
-
 }
+
 @media screen and (max-width: 1024px) {
  .nav-links {
      width: 50%;
@@ -259,6 +255,7 @@ nav {
 /* nav-animations */
 .nav-active {
     transform: translateX(0%);
+    
 }
 
 @keyframes navLinkFade {
